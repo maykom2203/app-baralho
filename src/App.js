@@ -3,9 +3,9 @@ import React from 'react';
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <head>
         <h1>Tryunfo</h1>
-      </div>
+      </head>
     );
   }
 }
