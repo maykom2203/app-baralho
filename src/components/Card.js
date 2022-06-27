@@ -19,14 +19,17 @@ class Card extends React.Component {
         </p>
         <p data-testid="attr1-card">
           {cardAttr1}
+          <br />
           {linha}
         </p>
         <p data-testid="attr2-card">
           {cardAttr2}
+          <br />
           {linha}
         </p>
         <p data-testid="attr3-card">
           {cardAttr3}
+          <br />
           {linha}
         </p>
         <p data-testid="rare-card">
