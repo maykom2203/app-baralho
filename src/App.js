@@ -15,6 +15,7 @@ class App extends React.Component {
       cardRare: 'normal',
       cardTrunfo: false,
       isSaveButtonDisabled: true,
+      cardBaralho: [],
     };
   }
 
@@ -45,16 +46,28 @@ ValidForm = () => {
   }
 }
 
+handleSubmit = (event) => {
+  event.preventDefault();
+  const card = this.state;
+  this.setState((prevState) => ({
+    cardName: '',
+    cardDescription: '',
+    cardAttr1: '0',
+    cardAttr2: '0',
+    cardAttr3: '0',
+    cardImage: '',
+    cardRare: 'normal',
+    cardTrunfo: false,
+    cardBaralho: [...prevState.cardBaralho, card],
+  }));
+}
+
   handleChange = ({ target }) => {
     const { name } = target;
     const value = target.type === 'checkbox'
       ? target.checked : target.value;
     this.setState({
       [name]: value }, this.ValidForm);
-  }
-
-  handleSubmit = (event) => {
-    event.preventDefault();
   }
 
   render() {
