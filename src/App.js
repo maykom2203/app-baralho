@@ -14,9 +14,22 @@ class App extends React.Component {
       cardImage: '',
       cardRare: 'normal',
       cardTrunfo: false,
+      hasTrunfo: false,
       isSaveButtonDisabled: true,
       cardBaralho: [],
     };
+  }
+
+  SuperTryunfo = () => {
+    const { cardBaralho } = this.state;
+    const filtroSuperTrunfo = cardBaralho.some((cardSup) => cardSup.cardTrunfo === true);
+    this.setState({ hasTrunfo: filtroSuperTrunfo });
+  }
+
+  deletCard = (event) => {
+    const { cardBaralho } = this.state;
+    this.setState({ cardBaralho: cardBaralho.filter((card) => card.cardName !== event) },
+      this.SuperTryunfo);
   }
 
 ValidForm = () => {
@@ -59,7 +72,7 @@ handleSubmit = (event) => {
     cardRare: 'normal',
     cardTrunfo: false,
     cardBaralho: [...prevState.cardBaralho, card],
-  }));
+  }), this.SuperTryunfo);
 }
 
   handleChange = ({ target }) => {
@@ -73,7 +86,7 @@ handleSubmit = (event) => {
   render() {
     const { cardName, cardDescription, cardAttr1,
       cardAttr2, cardAttr3, cardImage, cardRare,
-      cardTrunfo, isSaveButtonDisabled, cardBaralho } = this.state;
+      cardTrunfo, isSaveButtonDisabled, cardBaralho, hasTrunfo } = this.state;
     return (
       <div>
         <h1>Tryunfo</h1>
@@ -87,6 +100,7 @@ handleSubmit = (event) => {
           cardImage={ cardImage }
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
+          hasTrunfo={ hasTrunfo }
           onSaveButtonClick={ this.handleSubmit }
           isSaveButtonDisabled={ isSaveButtonDisabled }
 
@@ -104,19 +118,25 @@ handleSubmit = (event) => {
 
         />
         <div>
-          {cardBaralho.map((card) => (
-            <div key={ card.cardName }>
-              {console.log(card)}
+          {cardBaralho.map((cad) => (
+            <div key={ cad.cardName }>
               <Card
-                cardName={ card.cardName }
-                cardDescription={ card.cardDescription }
-                cardAttr1={ card.cardAttr1 }
-                cardAttr2={ card.cardAttr2 }
-                cardAttr3={ card.cardAttr3 }
-                cardImage={ card.cardImage }
-                cardRare={ card.cardRare }
-                cardTrunfo={ card.cardTrunfo }
+                cardName={ cad.cardName }
+                cardDescription={ cad.cardDescription }
+                cardAttr1={ cad.cardAttr1 }
+                cardAttr2={ cad.cardAttr2 }
+                cardAttr3={ cad.cardAttr3 }
+                cardImage={ cad.cardImage }
+                cardRare={ cad.cardRare }
+                cardTrunfo={ cad.cardTrunfo }
               />
+              <button
+                type="button"
+                data-testid="delete-button"
+                onClick={ () => this.deletCard(cad.cardName) }
+              >
+                excluir
+              </button>
             </div>
           ))}
         </div>
