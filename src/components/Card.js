@@ -10,6 +10,7 @@ class Card extends React.Component {
 
     return (
       <div>
+
         <h3 data-testid="name-card">
           {cardName}
         </h3>
@@ -36,6 +37,7 @@ class Card extends React.Component {
           {cardRare}
         </p>
         {cardTrunfo === true ? <p data-testid="trunfo-card">Super Trunfo </p> : null}
+
       </div>
     );
   }
