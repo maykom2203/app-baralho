@@ -1,0 +1,21 @@
+.cardAtraz {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    background-color: #171717;
+    border-radius: 20px;
+    transition: .4s ease-in-out;
+  }
+
+  .cardAtraz:hover {
+    transform: scale(1.05);
+    border: 1px solid black;
+  }
+
+  .imgEscudo {
+    width: 150px;
+  }

@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(101, 12, 12);
+}
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.home {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.separaBagroud{
+    background-color: white;
+    height: 20px;
+}
