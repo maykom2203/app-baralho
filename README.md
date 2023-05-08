@@ -1,13 +1,32 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Boas-vindas ao projeto App de Cards!
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+  <summary><strong>:memo: Habilidades Adquiriadas: </strong></summary><br />
+  
+  * Ler o estado de um componente e usá-lo para alterar o que exibimos no browser
+
+  * Inicializar um componente, dando a ele um estado pré-definido
+
+  * Atualizar o estado de um componente
+
+  * Capturar eventos utilizando a sintaxe do React
+
+  * Criar formulários utilizando sintaxe JSX com as tags: `input`, `textarea`, `select`, `form`, `checkbox`
+
+  * Transmitir informações de componentes filhos para componentes pais via callbacks
+ 
+
+ <summary><strong>:memo: Orientações </strong></summary><br />
+
+Para acessar o projeto, atente-se a cada passo descrito a seguir, e se tiver qualquer dúvida, me envie uma mensagem :)
+
+Clone o repositório
+Use o comando: git@github.com:maykom2203/App-de-Receitas.git
+
+Instale as dependências
+npm install.
+
+
+ <summary><strong>:memo:Observações </strong></summary><br />
+
+  * 3 dias de projeto;
